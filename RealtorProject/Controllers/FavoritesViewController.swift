@@ -7,28 +7,32 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
-    
+class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     let favoritesView = FavoritesView()
+    let models = ["Restaurant", "Library", "Park"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoritesView.configure()
+        favoritesView.configure(tableDelegate: self, tableDataSource: self)
         self.view = favoritesView
+        view.backgroundColor = .systemBackground
         title = "Favorite Places"
         navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        models.count
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = favoritesView.table.dequeueReusableCell(withIdentifier: FavoritesViewCell.identifier, for: indexPath) as? FavoritesViewCell else {
+            return UITableViewCell()
+        }
+        let model = models[indexPath.row]
+        cell.configure(text:model)
+        return cell
+    }
+    
 }
