@@ -15,6 +15,8 @@ class SearchViewController: UIViewController, SearchViewDelegate {
     }
     
     func tappedWorkoutButton() {
+        let mapVc = MapViewController()
+        self.navigationController?.pushViewController(mapVc, animated: true)
         print("I wanna workout")
     }
     
@@ -36,7 +38,7 @@ class SearchViewController: UIViewController, SearchViewDelegate {
         self.view = searchView
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
 
