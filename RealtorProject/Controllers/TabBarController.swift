@@ -20,8 +20,10 @@ class TabBarController: UITabBarController {
         let searchViewController = SearchViewController()
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
+        let favoritesViewController = FavoritesViewController()
+        favoritesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         
-        let viewControllers = [searchViewController].map{UINavigationController(rootViewController: $0)}
+        let viewControllers = [searchViewController, favoritesViewController ].map{UINavigationController(rootViewController: $0)}
         return viewControllers
     }
 
