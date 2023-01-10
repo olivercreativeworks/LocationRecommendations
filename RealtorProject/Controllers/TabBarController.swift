@@ -13,6 +13,11 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         self.viewControllers = self.getViewControllers()
         self.tabBar.backgroundColor = .white
+        Task{
+            print("Getting data")
+            Webservice().getData()
+            print("Done")
+        }
         // Do any additional setup after loading the view.
     }
     
