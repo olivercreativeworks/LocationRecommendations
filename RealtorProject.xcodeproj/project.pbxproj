@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A783E3EE296CCBF700C1B79E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783E3ED296CCBF700C1B79E /* TabBarController.swift */; };
 		A793423D296CD0BA00DF863D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793423C296CD0BA00DF863D /* SearchView.swift */; };
+		A7934240296CFD0500DF863D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793423F296CFD0500DF863D /* PreferencesViewController.swift */; };
+		A7934242296CFD4600DF863D /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7934241296CFD4600DF863D /* PreferencesView.swift */; };
 		A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180B8296CC2150072E90C /* AppDelegate.swift */; };
 		A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BA296CC2150072E90C /* SceneDelegate.swift */; };
 		A7C180BD296CC2150072E90C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BC296CC2150072E90C /* SearchViewController.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		A783E3ED296CCBF700C1B79E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A793423C296CD0BA00DF863D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		A793423F296CFD0500DF863D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		A7934241296CFD4600DF863D /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		A7C180B5296CC2150072E90C /* RealtorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealtorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C180B8296CC2150072E90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7C180BA296CC2150072E90C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		A783E3EF296CCC0200C1B79E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A793423F296CFD0500DF863D /* PreferencesViewController.swift */,
 				A783E3ED296CCBF700C1B79E /* TabBarController.swift */,
 				A7C180BC296CC2150072E90C /* SearchViewController.swift */,
 			);
@@ -51,6 +56,7 @@
 		A793423E296CD0C000DF863D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7934241296CFD4600DF863D /* PreferencesView.swift */,
 				A793423C296CD0BA00DF863D /* SearchView.swift */,
 			);
 			path = Views;
@@ -161,6 +167,8 @@
 				A783E3EE296CCBF700C1B79E /* TabBarController.swift in Sources */,
 				A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */,
 				A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */,
+				A7934240296CFD0500DF863D /* PreferencesViewController.swift in Sources */,
+				A7934242296CFD4600DF863D /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
