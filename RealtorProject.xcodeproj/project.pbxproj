@@ -15,6 +15,8 @@
 		A793424A296D317200DF863D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7934249296D317200DF863D /* MapView.swift */; };
 		A793424C296D624E00DF863D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793424B296D624E00DF863D /* FavoritesView.swift */; };
 		A793424E296D626500DF863D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793424D296D626500DF863D /* FavoritesViewController.swift */; };
+		A7934250296DA6D400DF863D /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793424F296DA6D400DF863D /* RecommendationViewController.swift */; };
+		A7934252296DA6EB00DF863D /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7934251296DA6EB00DF863D /* RecommendationView.swift */; };
 		A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180B8296CC2150072E90C /* AppDelegate.swift */; };
 		A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BA296CC2150072E90C /* SceneDelegate.swift */; };
 		A7C180BD296CC2150072E90C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BC296CC2150072E90C /* SearchViewController.swift */; };
@@ -31,6 +33,8 @@
 		A7934249296D317200DF863D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A793424B296D624E00DF863D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		A793424D296D626500DF863D /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		A793424F296DA6D400DF863D /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
+		A7934251296DA6EB00DF863D /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
 		A7C180B5296CC2150072E90C /* RealtorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealtorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C180B8296CC2150072E90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7C180BA296CC2150072E90C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		A783E3EF296CCC0200C1B79E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A793424F296DA6D400DF863D /* RecommendationViewController.swift */,
 				A793424D296D626500DF863D /* FavoritesViewController.swift */,
 				A7934247296D316000DF863D /* MapViewController.swift */,
 				A793423F296CFD0500DF863D /* PreferencesViewController.swift */,
@@ -66,6 +71,7 @@
 		A793423E296CD0C000DF863D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7934251296DA6EB00DF863D /* RecommendationView.swift */,
 				A793424B296D624E00DF863D /* FavoritesView.swift */,
 				A7934249296D317200DF863D /* MapView.swift */,
 				A7934241296CFD4600DF863D /* PreferencesView.swift */,
@@ -179,10 +185,12 @@
 				A7C180BD296CC2150072E90C /* SearchViewController.swift in Sources */,
 				A783E3EE296CCBF700C1B79E /* TabBarController.swift in Sources */,
 				A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */,
+				A7934252296DA6EB00DF863D /* RecommendationView.swift in Sources */,
 				A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */,
 				A793424E296D626500DF863D /* FavoritesViewController.swift in Sources */,
 				A7934240296CFD0500DF863D /* PreferencesViewController.swift in Sources */,
 				A7934242296CFD4600DF863D /* PreferencesView.swift in Sources */,
+				A7934250296DA6D400DF863D /* RecommendationViewController.swift in Sources */,
 				A793424A296D317200DF863D /* MapView.swift in Sources */,
 				A7934248296D316000DF863D /* MapViewController.swift in Sources */,
 			);
