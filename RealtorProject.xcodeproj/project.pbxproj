@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A783E3EE296CCBF700C1B79E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A783E3ED296CCBF700C1B79E /* TabBarController.swift */; };
+		A793423D296CD0BA00DF863D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A793423C296CD0BA00DF863D /* SearchView.swift */; };
 		A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180B8296CC2150072E90C /* AppDelegate.swift */; };
 		A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BA296CC2150072E90C /* SceneDelegate.swift */; };
-		A7C180BD296CC2150072E90C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BC296CC2150072E90C /* ViewController.swift */; };
+		A7C180BD296CC2150072E90C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C180BC296CC2150072E90C /* SearchViewController.swift */; };
 		A7C180C2296CC2170072E90C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7C180C1296CC2170072E90C /* Assets.xcassets */; };
 		A7C180C5296CC2170072E90C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C180C3296CC2170072E90C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A783E3ED296CCBF700C1B79E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A793423C296CD0BA00DF863D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		A7C180B5296CC2150072E90C /* RealtorProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealtorProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C180B8296CC2150072E90C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7C180BA296CC2150072E90C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A7C180BC296CC2150072E90C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7C180BC296CC2150072E90C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A7C180C1296CC2170072E90C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7C180C4296CC2170072E90C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7C180C6296CC2170072E90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,9 +43,17 @@
 			isa = PBXGroup;
 			children = (
 				A783E3ED296CCBF700C1B79E /* TabBarController.swift */,
-				A7C180BC296CC2150072E90C /* ViewController.swift */,
+				A7C180BC296CC2150072E90C /* SearchViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A793423E296CD0C000DF863D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A793423C296CD0BA00DF863D /* SearchView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A7C180AC296CC2150072E90C = {
@@ -67,6 +77,7 @@
 			children = (
 				A7C180B8296CC2150072E90C /* AppDelegate.swift */,
 				A7C180BA296CC2150072E90C /* SceneDelegate.swift */,
+				A793423E296CD0C000DF863D /* Views */,
 				A783E3EF296CCC0200C1B79E /* Controllers */,
 				A7C180C1296CC2170072E90C /* Assets.xcassets */,
 				A7C180C3296CC2170072E90C /* LaunchScreen.storyboard */,
@@ -145,7 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C180BD296CC2150072E90C /* ViewController.swift in Sources */,
+				A793423D296CD0BA00DF863D /* SearchView.swift in Sources */,
+				A7C180BD296CC2150072E90C /* SearchViewController.swift in Sources */,
 				A783E3EE296CCBF700C1B79E /* TabBarController.swift in Sources */,
 				A7C180B9296CC2150072E90C /* AppDelegate.swift in Sources */,
 				A7C180BB296CC2150072E90C /* SceneDelegate.swift in Sources */,

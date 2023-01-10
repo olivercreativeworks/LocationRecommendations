@@ -9,9 +9,12 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    let searchView = SearchView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        searchView.configure()
+        self.view = searchView
         // Do any additional setup after loading the view.
     }
 
