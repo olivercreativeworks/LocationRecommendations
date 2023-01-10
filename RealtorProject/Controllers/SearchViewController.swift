@@ -22,6 +22,8 @@ class SearchViewController: UIViewController, SearchViewDelegate {
     
     func tappedBoredButton() {
         print("I'm bored")
+        let recommendationVc = RecommendationViewController()
+        self.navigationController?.pushViewController(recommendationVc, animated: true)
     }
     
     func tappedSearchBarButton() {
