@@ -10,30 +10,30 @@ import UIKit
 class RecommendationView: UIView {
     var addToFavoritesButton = UIButton()
     var infoLabel = UILabel()
-    
+
     // when doing this use the person's curent location - recommendation location to get the delta so both points show up in the map window
     var viewRecommendationOnMapButton = UIButton()
-    
+
     func configure(){
         backgroundColor = .systemBackground
         configureInfoLabel()
         configureAddToFavoritesButton()
         configureViewRecommendationOnMapButton()
     }
-    
+
     func configureInfoLabel(){
         infoLabel.text = "Restaurant Name Here"
-        
+
         // Set font wrapping
         infoLabel.lineBreakMode = .byWordWrapping
         infoLabel.numberOfLines = 0
-        
+
         // Styling Font
         infoLabel.textColor = .label
 //        infoLabel.textAlignment = .center
         infoLabel.font = UIFont.systemFont(ofSize: 40)
         infoLabel.adjustsFontSizeToFitWidth = true
-        
+
         addSubview(infoLabel)
         
         // Set constraints
@@ -51,7 +51,6 @@ class RecommendationView: UIView {
         }))
         configureButton(addToFavoritesButton)
         addToFavoritesButton.backgroundColor = .clear
-        
         
         addToFavoritesButton.setTitle("Add to Favorites", for: .normal)
         addToFavoritesButton.setImage(UIImage(systemName: "star")?.withRenderingMode(.alwaysTemplate), for: .normal)

@@ -17,7 +17,7 @@ class FavoritesView: UIView {
         table.register(FavoritesViewCell.self, forCellReuseIdentifier: FavoritesViewCell.identifier)
         addSubview(table)
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.pin(toSafeAreaOf: self)
+//        table.pin(toSafeAreaOf: self)
     }
 }
 
