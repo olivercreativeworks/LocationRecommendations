@@ -7,32 +7,25 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let favoritesView = FavoritesView()
+class FavoritesViewController: UIViewController {
     let models = ["Restaurant", "Library", "Park"]
-    
+
+    var searchController = UISearchController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoritesView.configure(tableDelegate: self, tableDataSource: self)
-        self.view = favoritesView
-        view.backgroundColor = .systemBackground
-        title = "Favorite Places"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        // Do any additional setup after loading the view.
+
+        searchController = UISearchController(searchResultsController: self)
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+
+        navigationController?.view.backgroundColor = .white
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        models.count
+
+}
+
+extension FavoritesViewController: UISearchBarDelegate, UISearchControllerDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = favoritesView.table.dequeueReusableCell(withIdentifier: FavoritesViewCell.identifier, for: indexPath) as? FavoritesViewCell else {
-            return UITableViewCell()
-        }
-        let model = models[indexPath.row]
-        cell.configure(text:model)
-        return cell
-    }
-    
 }
