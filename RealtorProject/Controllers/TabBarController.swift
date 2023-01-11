@@ -37,14 +37,14 @@ class TabBarController: UITabBarController, ProcessDataDelegate {
         super.viewDidLoad()
         self.viewControllers = self.getViewControllers()
         self.tabBar.backgroundColor = .white
-        Task{
-            print("Getting data")
-            await Webservice.getDataFromFourSquareAPI(
-                options: FourSquareAPIUrlOptions(startLocation: StartLocation(coordinates: Coordinates(latitude: 41.8781, longitude: -87.6298)),
-                                                 category: FourSquareCategoriesOption(categories: .diningAndDrinking)),
-                delegate: self)
-            // Do any additional setup after loading the view.
-        }
+//        Task{
+//            print("Getting data")
+//            await Webservice.getDataFromFourSquareAPI(
+//                options: FourSquareAPIUrlOptions(startLocation: StartLocation(coordinates: Coordinates(latitude: 41.8781, longitude: -87.6298)),
+//                                                 category: FourSquareCategoriesOption(categories: .diningAndDrinking)),
+//                delegate: self)
+//            // Do any additional setup after loading the view.
+//        }
     }
     
     private func getViewControllers() -> [UIViewController]{

@@ -81,12 +81,12 @@
 		A783E3EF296CCC0200C1B79E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A783E3ED296CCBF700C1B79E /* TabBarController.swift */,
 				A7C180BC296CC2150072E90C /* HomeViewController.swift */,
+				A7934247296D316000DF863D /* MapViewController.swift */,
 				A793424F296DA6D400DF863D /* RecommendationViewController.swift */,
 				A793424D296D626500DF863D /* FavoritesViewController.swift */,
-				A7934247296D316000DF863D /* MapViewController.swift */,
 				A793423F296CFD0500DF863D /* PreferencesViewController.swift */,
-				A783E3ED296CCBF700C1B79E /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				A793423C296CD0BA00DF863D /* HomeView.swift */,
+				A7934249296D317200DF863D /* MapView.swift */,
 				A7934251296DA6EB00DF863D /* RecommendationView.swift */,
 				A793424B296D624E00DF863D /* FavoritesView.swift */,
-				A7934249296D317200DF863D /* MapView.swift */,
 				A7934241296CFD4600DF863D /* PreferencesView.swift */,
 			);
 			path = Views;
