@@ -23,7 +23,7 @@ struct Circle: Codable{
 struct Place: Codable{
     let fsq_id: String?
     let categories: [Category]?
-    let chains: [String]?
+    let chains: [Dictionary<String, String>]?
     let distance: Int?
     let geocodes: Geocode?
     let link:String?
@@ -48,8 +48,8 @@ struct Geocode: Codable{
 }
 
 struct Coordinates: Codable{
-    let latitude: Double?
-    let longitude: Double?
+    let latitude: Double
+    let longitude: Double
 }
 struct Location: Codable{
     let address: String?

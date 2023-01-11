@@ -10,45 +10,33 @@ import Foundation
 enum WebError:Error{
     case invalidUrlError, badResponseError
 }
+
+protocol ProcessDataDelegate{
+    func processData(_ data:Data?, _ response:URLResponse?, _ error:Error?)
+}
+
 class Webservice{
-    
-    func getData() {
+    static func getDataFromFourSquareAPI(options: FourSquareAPIUrlOptions, delegate:ProcessDataDelegate) async -> Void {
+        var urlString = FourSquareAPIUrlOptionsMapper(options: options).urlString
+        guard let url = URL(string: urlString ) else {return}
+
         let apikey = "fsq3fNLNz7CZXYSmSKOYslrHuZnI6Pp1RRCDipdPI4Zm7X8="
-        
+
         let headers = [
             "accept": "application/json",
             "authorization": apikey
         ]
-        guard let url = URL(string: "https://api.foursquare.com/v3/places/search") else {return}
-//      Build the request
         var request = URLRequest(url: url,
                                  cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0
         )
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
-        
-        
-        let dataTask = URLSession.shared.dataTask(with:request) { data, response, error in
-            guard let data = data, error == nil else{
-                return
-            }
-            
-            var result:Places?
-            do{
-                result = try JSONDecoder().decode(Places.self, from: data)
-            }catch{
-                print(error)
-            }
-            guard let json = result else {
-                return
-            }
-            print(json.results?.count)
-            print(json.results?[0].name)
-            print(json.results?.map{$0.name})
-            
+        let dataTask = URLSession.shared.dataTask(with:request)
+        {
+            data, response, error in delegate.processData(data, response, error)
         }
+
         dataTask.resume()
     }
-
 }
