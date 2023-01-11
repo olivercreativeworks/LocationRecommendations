@@ -7,17 +7,48 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, ProcessDataDelegate {
+    func processData(_ data: Data?, _ response: URLResponse?, _ error: Error?) {
+        guard let data = data, error == nil else{
+            return
+        }
+        
+        var result:Places?
+        do{
+            result = try JSONDecoder().decode(Places.self, from: data)
+        }catch{
+            print(error)
+        }
+        guard let json = result else {
+            return
+        }
+        print(json.results?.count)
+        print(json.results?[0].name)
+        print(json.results?.map{$0.name})
+        
+        
+        print(json.results?.map{$0.categories}
+            .map{$0?[0].name}
+        )
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewControllers = self.getViewControllers()
         self.tabBar.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        Task{
+            print("Getting data")
+            await Webservice.getDataFromFourSquareAPI(
+                options: FourSquareAPIUrlOptions(startLocation: StartLocation(coordinates: Coordinates(latitude: 41.8781, longitude: -87.6298)),
+                                                 category: FourSquareCategoriesOption(categories: .diningAndDrinking)),
+                delegate: self)
+            // Do any additional setup after loading the view.
+        }
     }
     
     private func getViewControllers() -> [UIViewController]{
-        let searchViewController = SearchViewController()
+        let searchViewController = HomeViewController()
         searchViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         
         let favoritesViewController = FavoritesViewController()
