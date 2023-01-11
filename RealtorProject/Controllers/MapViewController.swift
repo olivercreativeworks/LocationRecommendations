@@ -8,7 +8,13 @@
 import UIKit
 import CoreLocation
 
+protocol MapViewControllerDelegate{
+    func findPlaces(near location: CLLocationCoordinate2D)
+}
+
 class MapViewController: UIViewController {
+    
+    var delegate: MapViewControllerDelegate?
     
     let mapView = MapView()
     let searchController = UISearchController(searchResultsController: nil)

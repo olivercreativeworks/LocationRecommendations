@@ -112,6 +112,14 @@ struct FourSquareAPIUrlOptionsMapper{
     }
 }
 
+//https://location.foursquare.com/places/docs/categories
+enum FourSquarePlaceCategoryTaxonomyCode: Int{
+    case diningAndDrinking = 13000
+    case artsAndentertainment = 10000
+    case landmarks = 16000
+    case sportsAndRecreation = 18000
+}
+
 struct StartLocation{
     let coordinates: Coordinates?
     let near: String?
