@@ -20,7 +20,7 @@ class Webservice{
         var urlString = FourSquareAPIUrlOptionsMapper(options: options).urlString
         guard let url = URL(string: urlString ) else {return}
 
-        let apikey = "fsq3fNLNz7CZXYSmSKOYslrHuZnI6Pp1RRCDipdPI4Zm7X8="
+        let apikey = ""
 
         let headers = [
             "accept": "application/json",
